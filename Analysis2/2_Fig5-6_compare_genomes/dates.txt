@@ -1,0 +1,6 @@
+Anopheles_cruzii,Anopheles_gambiae	-104.43
+Anopheles_gambiae,Culex_pipiens_pallens	-180.12
+Culex_quinquefasciatus,Culex_pipiens_pallens	-9.42
+Aedes_aegypti_formosus,Aedes_mascarensis	-8.96
+Anopheles_cruzii,Anopheles_darlingi	-67.32
+Aedes_aegypti_formosus,Armigeres_subalbatus -44.38

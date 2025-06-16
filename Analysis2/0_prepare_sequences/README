@@ -1,0 +1,15 @@
+Run these scripts in order.
+
+Before running, prepare the directory structure.
+0_original contains gff files that contains all isoforms
+fna contains nucleotide fastas
+ensure that the gffs and fastas have matching names!
+
+Description of each script:
+
+1. subset the gffs to include only the longest isoforms
+2. extract amino acid sequences using the gffs from step 1 and the fastas
+3. remove stop codons
+4. simplifies the fasta headers 
+
+The amino acid fastas output from step 4 should be used for analysis.

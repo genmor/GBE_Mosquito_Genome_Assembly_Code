@@ -1,0 +1,56 @@
+assembly:
+  accession: ASSEMBLY_NAME
+  level: chromosome
+  prefix: ASSEMBLY_NAME
+  file: PATH/TO/ASSEMBLY
+  scaffold-count: 
+  span: 
+busco:
+  basal_lineages:
+    - diptera_odb10
+  lineages:
+    - diptera_odb10
+  download_dir: /work/soghigian_lab/databases/busco
+settings:
+  blast_chunk: 100000
+  blast_max_chunks: 10
+  blast_min_length: 1000
+  blast_overlap: 0
+  stats_chunk: 1000
+  stats_windows:
+    - 0.1
+    - 0.01
+    - 100000
+    - 1000000
+  taxdump: /work/soghigian_lab/databases/taxdump 
+  tmp: /tmp
+reads:
+  coverage:
+    max: 40
+  paired: []
+  single:
+    - base_count: 
+      file: PATH/TO/CONCATENATED/READS
+      platform: PACBIO_SMRT
+      prefix: READS_PREFIX
+similarity:
+  defaults:
+    evalue: 1.0e-10
+    import_evalue: 1.0e-25
+    max_target_seqs: 10
+    taxrule: buscogenes
+  diamond_blastx:
+    name: reference_proteomes
+    path: /work/soghigian_lab/databases/uniprot
+  blastn:
+    name: nt_euk_prok
+    path: /work/soghigian_lab/databases/gb_nt
+  diamond_blastp:
+    name: reference_proteomes
+    path: /work/soghigian_lab/databases/uniprot
+    import_max_target_seqs: 100000
+    taxrule: blastp=buscogenes
+taxon:
+  name: TAXON NAME
+  taxid: "NCBI TAXON ID"
+version: 1

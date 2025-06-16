@@ -1,0 +1,23 @@
+#!/bin/bash
+####### Reserve computing resources #############
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=40
+#SBATCH --time=100:00:00
+#SBATCH --mem=180G
+
+####### Set environment variables ###############
+module load gcc/10.2.0
+module load bioconda/conda3
+source activate /work/soghigian_lab/apps/conda/envs/ipa
+export PATH="/work/soghigian_lab/apps/conda/envs/ipa/bin:$PATH"
+
+####### Run your script #########################
+cd /scratch/${SLURM_JOB_ID}
+echo check /scratch/${SLURM_JOB_ID}
+
+#ipa takes a fofn (file of file names) which is simply a list of paths to the reads
+fofn=ipa_reads.fofn
+
+ipa local -i $fofn \
+--genome-size 1300000000 --nthreads 10 --njobs 4

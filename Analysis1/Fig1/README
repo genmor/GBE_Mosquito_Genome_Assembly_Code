@@ -1,0 +1,10 @@
+to generate a figure similar to Figure 1 of the manuscript,
+
+use asmidx (https://github.com/genmor/asmidx)
+follow instructions to install in R
+
+once installed:
+
+asmidx()
+
+then load each dataset
